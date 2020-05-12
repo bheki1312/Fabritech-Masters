@@ -51,8 +51,19 @@
 	color: #000;
 }
 
-#sistContainer .button.hide {
+#sistContainer .hide {
 	display: none;
+}
+
+#sistContainer .button.button-destroy {
+	color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
+
+#sistContainer .button.button-destroy:hover {
+	background-color: #d9534f;
+	border-color: #d43f3a;
 }
 
 #sistContainer .tablenav .page-numbers {
@@ -82,7 +93,7 @@
 	line-height: 1.4em;
 }
 
-/* Options page */
+/* Settings page */
 
 #sistContainer .tab-pane, tr.delivery-method {
 	display: none;
@@ -147,6 +158,15 @@
 	width: 10px;
 }
 
+#sistContainer #excludableUrlRowTemplate {
+	display: none;
+}
+
+#sistContainer .excludable-url-row input[type='checkbox'],
+#sistContainer .excludable-url-row .button {
+	margin-left: 10px;
+}
+
 /* Diagnostics page */
 
 #sistContainer #diagnosticsPage table.striped {
@@ -157,12 +177,9 @@
 	width: 75%;
 }
 
-#sistContainer #diagnosticsPage td.test {
+#sistContainer #diagnosticsPage td.test.success, #sistContainer #diagnosticsPage td.enabled {
 	font-weight: bold;
 	width: 25%;
-}
-
-#sistContainer #diagnosticsPage td.test.success {
 	color: #008000;
 }
 
@@ -171,7 +188,13 @@
 }
 
 #sistContainer #diagnosticsPage td.test.error {
+	font-weight: bold;
+	width: 25%;
 	color: #dc143c;
+}
+
+#sistContainer #diagnosticsPage td.disabled {
+	width: 25%;
 }
 
 #sistContainer #diagnosticsPage td.test.error::before {
